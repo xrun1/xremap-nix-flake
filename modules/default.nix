@@ -116,6 +116,7 @@ with lib; {
       default = "";
       description = "Device name which xremap will remap. If not specified - xremap will remap all devices.";
     };
+    mouse = mkEnableOption "Include mice when .deviceName is not specified.";
     watch = mkEnableOption "running xremap watching new devices";
   };
 }

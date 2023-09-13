@@ -16,7 +16,7 @@ in
       };
       Service = {
         Type = "simple";
-        ExecStart = "${lib.getExe cfg.package} ${if cfg.deviceName != "" then "--device \"${cfg.deviceName}\"" else ""} ${if cfg.watch then "--watch" else ""} ${configFile}";
+        ExecStart = "${lib.getExe cfg.package} ${if cfg.deviceName != "" then "--device \"${cfg.deviceName}\"" else ""} ${if cfg.watch then "--watch" else ""} ${if cfg.mouse then "--mouse" else ""} ${configFile}";
         Restart = "always";
       };
       Install.WantedBy = [ "graphical-session.target" ];
